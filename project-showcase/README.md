@@ -1,16 +1,48 @@
-# React + Vite
+## Welcome to the Summative Lab for Module 4 of the Software Engineering Course.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The objective here was to create a dynamic, responsive Single Page Application (SPA) using React.
 
-Currently, two official plugins are available:
+_The project structure is as follows:_    
+    App.jsx
+    ---ProjectForm.jsx
+    ---SearchFilter.jsx
+    ---ProjectList.jsx
+        ---ProjectCard.jsx
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
+## Installation and Setup
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Clone the repo
+    get clone https://github.com/sanjam00/summative-lab-8-spa-application/tree/main
 
-## Expanding the ESLint configuration
+Install dependencies
+    npm install
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Start the development server
+    npm run dev
+
+
+## User experience
+Before I explain the functionality of the project, I want to go over what the SPA does for the user. 
+We were tasked with creating an SPA that displayed past projects for a creative agency. The SPA needed to be dynamic, responsive, modern, and easily maintainable. Within this description, there also needed to be a way to search through projects and add new projects to the list.
+
+
+## Required functionality
+*Regarding functionality, there were 4 core features to implement:*
+There wasn't much detail in these instructions, but that was the point. The purpose of this assignment was to put everything we'd learned in the past 3 weeks into a portfolio, while giving us the opportunity to practice our CSS skills if we chose.
+
+**1. A landing page displaying a list of projects**
+I started with mapping through each ProjectCard in ProjectList.jsx, creating a simple and uniform list of each project that has its own neat card. Then in ProjectCard, I mapped through the project data from the projectData.js file- allowing me to display a dynamic list of projects that can be updated and searched through by name.
+
+**2. A form that allows users to add new projects dynamically**
+The functionality for this feature can be found mainly in ProjectForm.jsx, with global state being handled in App.jsx.
+
+**3. A search feature for dynamically filtering projects.**
+The search feature is found in SearchFilter.jsx, again with necessary state being handled in App.jsx.
+
+**4. A responsive design that is inspired by the mock-up.**
+This was the most lax feature. There was a basic mock up of what the final product should look like, besides that we were given free reign of the design.
+
+***Extra challenge:***
+For this final project, I chose to challenge myself a bit further by adding a collapsible feature to the Add Project Form. I did so because the display of the Project List was all the way at the bottom, and felt that the bulkiness of the form- while necessary- would hinder the user experience if they did not plan to add any projects.
+To make the animation smoother, I used the [Motion](https://motion.dev/?utm_source=chatgpt.com) library. Specifically, I largely referenced and played around with the information on [this page](https://motion.dev/docs/react-animation?utm_source=chatgpt.com) to get my desired effect.

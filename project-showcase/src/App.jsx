@@ -7,21 +7,25 @@ import projects from './projectsData';
 
 function App() {
   const [search, setSearch] = useState("")
+  const [projectData, setprojectData] = useState(projects)
 
   function handleSearch(input) {
     setSearch(input);
   }
 
-  const filteredProjects = projects.filter((proj) => {
+  function handleAddProject(newItem) {
+    setprojectData((prev) => [...prev, newItem])
+  }
+
+  const filteredProjects = projectData.filter((proj) => {
     return proj.name.toLowerCase().includes(search.toLowerCase())
   })
 
   return (
     <>
-      <ProjectForm />
+      <ProjectForm onAddProjectSubmit={handleAddProject} />
       <SearchFilter handleSearch={handleSearch} />
       <ProjectList projects={filteredProjects} handleSearch={handleSearch} />
-
     </>
   )
 }

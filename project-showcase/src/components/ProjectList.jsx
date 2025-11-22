@@ -2,7 +2,6 @@ import ProjectCard from "./ProjectCard"
 
 function ProjectList({ projects, ...props }) {
 
-
     return (
         <div className="cardsContainer">
             {projects.map((project) => (

@@ -8,11 +8,3 @@ function ProjectCard({ project, ...props }) {
 }
 
 export default ProjectCard
-
-
-// const projects = [
-//     {
-//         id: 1,
-//         name: "Project 1",
-//         description: "Description of the project"
-//     },
